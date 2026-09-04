@@ -1,20 +1,3 @@
-classDiagram
-    %% --- DOMAIN LAYER (Innermost Core) ---
-    class Entity {
-        <<Domain Layer>>
-        +Guid Id
-        +Validate() bool
-    }
-    class ValueObject {
-        <<Domain Layer>>
-        +Equals(other) bool
-    }
-    class IRepository~T~ {
-        <<Domain Layer - Interface>>
-        +GetById(Guid id) T
-        +Save(T entity) void
-    }
-
     %% --- APPLICATION LAYER ---
     class Interactor_UseCase {
         <<Application Layer>>
